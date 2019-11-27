@@ -4,17 +4,21 @@ import { StyleSheet, Text, View } from 'react-native';
 import HomeScreenBuah from './screens/HomeScreenBuah';
 import BuahScreen from './screens/BuahScreen';
 import SayurScreen from './screens/SayurScreen';
+import MenuUtama from './screens/MenuUtama';
+import AboutScreen from './screens/AboutScreen';
 
 const navigator = createStackNavigator({
   Buah: BuahScreen,
   Sayur: SayurScreen,
-  Home: HomeScreenBuah
+  Home: HomeScreenBuah,
+  Menu: MenuUtama,
+  About: AboutScreen
 },{
-  initialRouteName: 'Home',
+  initialRouteName: 'Menu',
   defaultNavigationOptions: {
     headerTitle: 'TaniBisnisShop',
     headerStyle: {
-      backgroundColor: 'green'
+      backgroundColor: '#4682B4'
     }
   } 
 });

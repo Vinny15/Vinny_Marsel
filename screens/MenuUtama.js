@@ -1,21 +1,21 @@
 import React from 'react';
 import { Text, Button, View, StyleSheet, ImageBackground,TouchableOpacity, Image, Alert, FlatList } from 'react-native';
 
-const HomeScreenBuah = ({ navigation }) => {
+const MenuUtama = ({ navigation }) => {
     return (
         <ImageBackground 
             source={{uri: 'http://hintergrundbild.org/wallpaper/full/1/4/e/52984-einfarbige-hintergrundbilder-2048x2048-fuer-ipad-2.jpg'}}
             style={{width: 400, height: 800}}
         >
             <View style={styles.listContainer}>
-                <TouchableOpacity style = {[styles.card, {backgroundColor:'#00BFFF'}]} onPress={() => navigation.navigate('Buah')} >
-                    <Image style={styles.cardImage} source={{uri:"https://cdn.pixabay.com/photo/2018/09/06/15/22/fruits-icons-3658525_960_720.png"}}/>
+                <TouchableOpacity style = {[styles.card, {backgroundColor:'#00BFFF'}]} onPress={() => navigation.navigate('Home')} >
+                    <Image style={styles.cardImage} source={{uri:"https://americanmdcenter.com/wp-content/uploads/2019/06/fruits-and-vegetables.png"}}/>
                 </TouchableOpacity>
-                <Text>Buah-buahan</Text>
-                <TouchableOpacity style = {[styles.card, {backgroundColor:'#87CEEB'}]} onPress={() => navigation.navigate('Sayur')} >
-                    <Image style={styles.cardImage} source={{uri:"http://www.clker.com/cliparts/c/z/h/C/R/T/veggies-hi.png"}}/>
+                <Text>Menu Buah dan Sayur</Text>
+                <TouchableOpacity style = {[styles.card, {backgroundColor:'#87CEEB'}]} onPress={() => navigation.navigate('About')} >
+                <Image style={styles.cardImage} source={{uri:"https://img.icons8.com/color/70/000000/name.png"}}/>
                 </TouchableOpacity>
-                <Text>Sayur-sayuran</Text>
+                <Text>Ebout</Text>
             </View>
         </ImageBackground>
     );
@@ -52,4 +52,4 @@ const styles = StyleSheet.create({
     }
   });
 
-export default HomeScreenBuah;
+export default MenuUtama;

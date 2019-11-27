@@ -1,0 +1,36 @@
+import React from 'react';
+import { Text, Button, View, StyleSheet, ImageBackground,TouchableOpacity, Image, Alert, FlatList } from 'react-native';
+
+const AboutScreen = ({ navigation }) => {
+    return (
+        <ImageBackground 
+            source={{uri: 'http://hintergrundbild.org/wallpaper/full/1/4/e/52984-einfarbige-hintergrundbilder-2048x2048-fuer-ipad-2.jpg'}}
+            style={{width: 400, height: 800}}
+        >
+            <View style={styles.listContainer}>
+                <TouchableOpacity >
+                    <Image style={styles.cardImage} source={{uri:"data:image/jpeg;base64,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"}}/>
+                </TouchableOpacity>
+                <Text>Marsel Dien</Text>
+                <TouchableOpacity >
+                <Image style={styles.cardImage} source={{uri:"https://i.ytimg.com/vi/wlDWHDacUlQ/hqdefault_live.jpg"}}/>
+                </TouchableOpacity>
+                <Text>Vinny Watuseke</Text>
+            </View>
+        </ImageBackground>
+    );
+};
+
+const styles = StyleSheet.create({
+
+    listContainer:{
+      alignItems:'center'
+    },
+    cardImage:{
+      height: 300,
+      width: 350,
+      alignSelf:'center'
+    }
+  });
+
+export default AboutScreen;

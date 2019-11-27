@@ -2,8 +2,8 @@ import React from 'react';
 import { Text, StyleSheet, FlatList, View, Image } from 'react-native';
 
 const sayuran = [
-    {name: 'Kangkung', image: 'https://i0.wp.com/alatfitnessbali.com/wp-content/uploads/2017/10/gambar-sayuran-pisang-cavendish_www.sayuranaz.com_.jpg'},
-    {name: 'Brokoli', image: 'https://higaragro.com/wp-content/uploads/2019/03/Pusat-Distributor-Grosir-Eceran-Jual-Bibit-Tanaman-sayuran-Mangga-Arumanis-Murah-online-di-kota-kabupaten.3.jpg'}
+    {name: 'Kangkung', image: 'http://ibudanmama.com/wp-content/uploads/2015/02/4-Manfaat-Kangkung-Bagi-Kesehatan-Anak.jpg'},
+    {name: 'Brokoli', image: 'http://4.bp.blogspot.com/-1lzBLd5B28o/VEPKr5KP3-I/AAAAAAAABEo/OD3s9j8XXVE/s1600/brokoli-super-food.jpg'}
 ];
 
 const SayurScreen = () => {
@@ -12,12 +12,12 @@ const SayurScreen = () => {
             data={sayuran}
             renderItem={({ item }) =>
                 <View>
-                    <Text>
+                    <Text style={{alignSelf: 'center'}}>
                         {item.name}
                     </Text>
                     <Image 
                         source={{uri: item.image}}
-                        style={{width: 100, height: 100}} 
+                        style={{width: 300, height: 200, alignSelf: 'center'}} 
                     />
                 </View>
             }
@@ -26,10 +26,5 @@ const SayurScreen = () => {
     );
 };
 
-const styles = StyleSheet.create({
-    textstyle: {
-        marginVertical: 80
-    }
-});
 
 export default SayurScreen;
