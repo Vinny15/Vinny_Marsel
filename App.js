@@ -5,16 +5,20 @@ import HomeScreenBuah from './screens/HomeScreenBuah';
 import BuahScreen from './screens/BuahScreen';
 import SayurScreen from './screens/SayurScreen';
 import MenuUtama from './screens/MenuUtama';
+import Profile from './screens/Profile';
 import AboutScreen from './screens/AboutScreen';
+import LoginScreen from './screens/LoginScreen';
 
 const navigator = createStackNavigator({
   Buah: BuahScreen,
   Sayur: SayurScreen,
   Home: HomeScreenBuah,
   Menu: MenuUtama,
-  About: AboutScreen
+  Profile: Profile,
+  About: AboutScreen,
+  Login: LoginScreen
 },{
-  initialRouteName: 'Menu',
+  initialRouteName: 'Login',
   defaultNavigationOptions: {
     headerTitle: 'TaniBisnisShop',
     headerStyle: {

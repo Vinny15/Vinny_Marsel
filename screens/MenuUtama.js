@@ -8,14 +8,18 @@ const MenuUtama = ({ navigation }) => {
             style={{width: 400, height: 800}}
         >
             <View style={styles.listContainer}>
+                <TouchableOpacity style = {[styles.card, {backgroundColor:'#00BFFF'}]} onPress={() => navigation.navigate('Profile')} >
+                    <Image style={styles.cardImage} source={{uri:"https://gulfpinnacletransporterp.com/customer_portal/static/src/img/avatar.png"}}/>
+                </TouchableOpacity>
+                <Text>My Profile</Text>
                 <TouchableOpacity style = {[styles.card, {backgroundColor:'#00BFFF'}]} onPress={() => navigation.navigate('Home')} >
                     <Image style={styles.cardImage} source={{uri:"https://americanmdcenter.com/wp-content/uploads/2019/06/fruits-and-vegetables.png"}}/>
                 </TouchableOpacity>
-                <Text>Menu Buah dan Sayur</Text>
+                <Text>Buah dan Sayur</Text>
                 <TouchableOpacity style = {[styles.card, {backgroundColor:'#87CEEB'}]} onPress={() => navigation.navigate('About')} >
                 <Image style={styles.cardImage} source={{uri:"https://img.icons8.com/color/70/000000/name.png"}}/>
                 </TouchableOpacity>
-                <Text>Ebout</Text>
+                <Text>Tentang Kami</Text>
             </View>
         </ImageBackground>
     );
