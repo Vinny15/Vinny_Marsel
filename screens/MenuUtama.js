@@ -4,22 +4,18 @@ import { Text, Button, View, StyleSheet, ImageBackground,TouchableOpacity, Image
 const MenuUtama = ({ navigation }) => {
     return (
         <ImageBackground 
-            source={{uri: 'http://hintergrundbild.org/wallpaper/full/1/4/e/52984-einfarbige-hintergrundbilder-2048x2048-fuer-ipad-2.jpg'}}
+            source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRQRAiHGGkZvf5ofUp5uXjM96pUAdbjBgHj0bDJiUlFIlimxPP0'}}
             style={{width: 400, height: 800}}
         >
             <View style={styles.listContainer}>
-                <TouchableOpacity style = {[styles.card, {backgroundColor:'#00BFFF'}]} onPress={() => navigation.navigate('Profile')} >
-                    <Image style={styles.cardImage} source={{uri:"https://gulfpinnacletransporterp.com/customer_portal/static/src/img/avatar.png"}}/>
+                <TouchableOpacity style = {[styles.card, {backgroundColor:'#87CEEB'}]} onPress={() => navigation.navigate('MenuPetani')} >
+                    <Image style={styles.cardImage} source={{uri:"https://cdn.pixabay.com/photo/2016/03/31/21/15/bread-1296280_960_720.png"}}/>
                 </TouchableOpacity>
-                <Text>My Profile</Text>
-                <TouchableOpacity style = {[styles.card, {backgroundColor:'#00BFFF'}]} onPress={() => navigation.navigate('Home')} >
-                    <Image style={styles.cardImage} source={{uri:"https://americanmdcenter.com/wp-content/uploads/2019/06/fruits-and-vegetables.png"}}/>
+                <Text>Petani</Text>
+                <TouchableOpacity style = {[styles.card, {backgroundColor:'#87CEEB'}]} onPress={() => navigation.navigate('Minum')} >
+                    <Image style={styles.cardImage} source={{uri:"https://pngimage.net/wp-content/uploads/2018/06/minuman-vector-png-2.png"}}/>
                 </TouchableOpacity>
-                <Text>Buah dan Sayur</Text>
-                <TouchableOpacity style = {[styles.card, {backgroundColor:'#87CEEB'}]} onPress={() => navigation.navigate('About')} >
-                <Image style={styles.cardImage} source={{uri:"https://img.icons8.com/color/70/000000/name.png"}}/>
-                </TouchableOpacity>
-                <Text>Tentang Kami</Text>
+                <Text>Pelanggan</Text>
             </View>
         </ImageBackground>
     );
